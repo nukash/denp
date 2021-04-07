@@ -1,0 +1,56 @@
+version: '3'
+services:
+  wordpress:
+    build: ./
+    ports:
+      - 8080:80
+    depends_on:
+      - db
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: wp_user
+      WORDPRESS_DB_PASSWORD: wp_pass
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DEBUG: 1
+    links:
+      - db
+    volumes:
+      #Swap the folder path for plugin vs theme development
+      - wordpress:/var/www/html
+      # - ../:/var/www/html/wp-content/plugins/plugin-dev
+      - ../theme-dev/:/var/www/html/wp-content/themes/theme-dev
+      - ./:/var/www/html/wp-content/themes/.devcontainer
+ 
+  db:
+    image: mariadb:10
+    environment:
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wp_user
+      MYSQL_PASSWORD: wp_pass
+      MYSQL_RANDOM_ROOT_PASSWORD: '1'
+    ports:
+      - 3306:3306
+    volumes:
+      - data:/var/lib/mysql
+  mailcatcher:
+    image: schickling/mailcatcher
+    ports:
+      - 1080:1080
+      - 1025:1025
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=db
+      - PMA_USER=wp_user
+      - PMA_PASSWORD=wp_pass
+    links:
+      - db
+    ports:
+      - 8112:80
+    volumes:
+      - /sessions
+
+volumes:
+  wordpress:
+  data:

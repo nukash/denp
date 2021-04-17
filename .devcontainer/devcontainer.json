@@ -16,7 +16,11 @@
 
 	// Add the IDs of any extensions you want installed.
 	"extensions": [
-		"bradlc.vscode-tailwindcss"
+		"bradlc.vscode-tailwindcss",
+		"mhutchie.git-graph",
+		"waderyan.gitblame",
+		"eamodio.gitlens",
+		"donjayamanne.githistory"
 	],
 
 	// Sets up WordPress on container start.

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Den"P"</title>
+    <link rel="stylesheet" href="dist/app.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="dist/app.js"></script>
+    <style>
+        @page {size: A4}
+    </style>
+</head>
+<body class="A4 border font-serif">
+    <div class="sheet flex flex-col items-center justify-around text-red-700">
+        <div class="denp w-[182mm] h-[127mm] p-[8mm] pl-[20mm] pt-[12mm] border">
+            <div class="h-full grid grid-rows-[20mm,20mm,1fr]">
+                <div class="grid grid-cols-2">
+                    <div class="flex flex-col justify-between">
+                        <div class="text-4xl tracking-widest">入金伝票</div>
+                        <div class="date flex flex-row items-center justify-end pr-[2mm] pb-[2mm]"><span class="inline-block w-[8mm]"></span>年<span class="inline-block w-[8mm]"></span>月<span class="inline-block w-[8mm]"></span>日</div>
+                    </div>
+
+                    <div class="border-t-2 border-l-2 border-r-2 border-red-700 grid grid-cols-[5mm,1fr,5mm,1fr,5mm,1fr,5mm,1fr]">
+                        
+                        <div class="flex-initial flex flex-row items-center justify-center">
+                            <div class="writing-vertical-rl text-xs inline-block">承認印</div>
+                        </div>
+                        <div class="border-l border-r border-red-700"></div>
+                        <div class="flex-initial"></div>
+                        <div class="border-l border-r border-red-700"></div>
+                        <div class="flex-initial"></div>
+                        <div class="border-l border-r border-red-700"></div>
+                        <div class="flex-initial"></div>
+                        <div class="border-l border-r border-red-700"></div>
+                        
+                    </div>
+                </div>
+                <div class="grid grid-cols-[5mm,60mm,5mm,1fr] border-t-2 border-red-700">
+                    <div class="flex-initial flex flex-row items-center justify-center border-l border-r border-red-700">
+                        <div class="writing-vertical-rl text-xs inline-block">コード</div>
+                    </div>
+                    <div class="flex-initial"></div>
+                    <div class="flex-initial flex flex-row items-center justify-center border-l border-r border-red-700">
+                        <div class="writing-vertical-rl text-xs inline-block">入金先</div>
+                    </div>
+                    <div class="flex-initial p-[3mm] flex flex-row justify-end items-center">
+                        <div class="text-3xl">様</div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-[3fr,5fr,4fr] grid-rows-[3fr,5fr,5fr,5fr,5fr,5fr] grid-flow-row border-t-2 border-red-700">
+                    <div class="border-r border-red-700 text-center flex flex-col items-center justify-center">勘定科目</div>
+                    <div class="border-r border-red-700 text-center flex flex-col items-center justify-center">適用</div>
+                    <div class="text-center flex flex-col items-center justify-center">金額</div>
+
+                    <div class="border-t border-r border-red-700 text-center"></div>
+                    <div class="border-t border-r border-red-700 text-center"></div>
+                    <div class="border-t border-red-700 text-center grid grid-cols-[1fr,1fr,1fr,1fr,1fr,1fr,1fr,2.2fr]">
+                        <div class="border-r border-red-700 flex items-center justify-center"></div>
+                        <div class="border-r border-red-700 flex items-center justify-center"></div>
+                        <div class="border-r border-red-700 flex items-center justify-center"></div>
+                        <div class="border-r border-red-700 flex items-center justify-center"></div>
+                        <div class="border-r border-red-700 flex items-center justify-center"></div>
+                        <div class="border-r border-red-700 flex items-center justify-center"></div>
+                        <div class="border-r border-red-700 flex items-center justify-center"></div>
+                    </div>
+
+                    <div class="border-t border-r border-red-700 text-center"></div>
+                    <div class="border-t border-r border-red-700 text-center"></div>
+                    <div class="border-t border-red-700 text-center grid grid-cols-[1fr,1fr,1fr,1fr,1fr,1fr,1fr,2.2fr]">
+                        <div class="border-r border-red-700 flex items-center justify-center"></div>
+                        <div class="border-r border-red-700 flex items-center justify-center"></div>
+                        <div class="border-r border-red-700 flex items-center justify-center"></div>
+                        <div class="border-r border-red-700 flex items-center justify-center"></div>
+                        <div class="border-r border-red-700 flex items-center justify-center"></div>
+                        <div class="border-r border-red-700 flex items-center justify-center"></div>
+                        <div class="border-r border-red-700 flex items-center justify-center"></div>
+                    </div>
+
+                    <div class="border-t border-r border-red-700 text-center"></div>
+                    <div class="border-t border-r border-red-700 text-center"></div>
+                    <div class="border-t border-red-700 text-center grid grid-cols-[1fr,1fr,1fr,1fr,1fr,1fr,1fr,2.2fr]">
+                        <div class="border-r border-red-700 flex items-center justify-center"></div>
+                        <div class="border-r border-red-700 flex items-center justify-center"></div>
+                        <div class="border-r border-red-700 flex items-center justify-center"></div>
+                        <div class="border-r border-red-700 flex items-center justify-center"></div>
+                        <div class="border-r border-red-700 flex items-center justify-center"></div>
+                        <div class="border-r border-red-700 flex items-center justify-center"></div>
+                        <div class="border-r border-red-700 flex items-center justify-center"></div>
+                    </div>
+
+                    <div class="border-t border-r border-red-700 text-center"></div>
+                    <div class="border-t border-r border-red-700 text-center"></div>
+                    <div class="border-t border-red-700 text-center grid grid-cols-[1fr,1fr,1fr,1fr,1fr,1fr,1fr,2.2fr]">
+                        <div class="border-r border-red-700 flex items-center justify-center"></div>
+                        <div class="border-r border-red-700 flex items-center justify-center"></div>
+                        <div class="border-r border-red-700 flex items-center justify-center"></div>
+                        <div class="border-r border-red-700 flex items-center justify-center"></div>
+                        <div class="border-r border-red-700 flex items-center justify-center"></div>
+                        <div class="border-r border-red-700 flex items-center justify-center"></div>
+                        <div class="border-r border-red-700 flex items-center justify-center"></div>
+                    </div>
+
+                    <div class="border-t-2 border-r border-b-2 col-span-2 border-red-700 text-center flex flex-row justify-around items-center text-xl">
+                        <span>合</span>
+                        <span>計</span>
+                    </div>
+                    <div class="border-t-2 border-b-2 border-red-700 text-center grid grid-cols-[1fr,1fr,1fr,1fr,1fr,1fr,1fr,2.2fr]">
+                        <div class="border-r border-red-700 flex items-center justify-center"></div>
+                        <div class="border-r border-red-700 flex items-center justify-center"></div>
+                        <div class="border-r border-red-700 flex items-center justify-center"></div>
+                        <div class="border-r border-red-700 flex items-center justify-center"></div>
+                        <div class="border-r border-red-700 flex items-center justify-center"></div>
+                        <div class="border-r border-red-700 flex items-center justify-center"></div>
+                        <div class="border-r border-red-700 flex items-center justify-center"></div>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

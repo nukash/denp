@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '~paper-css/paper.css';
+
+body.B3               .sheet { width: 364mm; height: 514mm }
+body.B3.landscape     .sheet { width: 515mm; height: 363mm }
+body.B4               .sheet { width: 257mm; height: 363mm }
+body.B4.landscape     .sheet { width: 364mm; height: 256mm }
+body.B5               .sheet { width: 182mm; height: 256mm }
+body.B5.landscape     .sheet { width: 257mm; height: 181mm }
+body.B6               .sheet { width: 128mm; height: 181mm }
+body.B6.landscape     .sheet { width: 182mm; height: 127mm }
+
+/** Fix for Chrome issue #273306 **/
+@media print {
+         body.B3.landscape { width: 515mm }
+body.B3, body.B4.landscape { width: 364mm }
+body.B4, body.B5.landscape { width: 257mm }
+body.B5, body.B6.landscape { width: 182mm }
+body.B6                    { width: 128mm }
+}
+
+.writing-vertical-rl{
+    writing-mode: vertical-rl
+}
